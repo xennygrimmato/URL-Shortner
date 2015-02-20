@@ -20,7 +20,7 @@ def validate_url(url):
 @csrf_exempt
 def shorten_url(url):
 	if validate_url(url):
-		api = bitly.Api(login='xenny', apikey='R_0ed741792b094fca92059fc053ee437c')
+		api = bitly.Api(login='login', apikey='apikey')
 		short = api.shorten(url)
 		return short
 	else:
